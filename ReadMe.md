@@ -92,6 +92,11 @@ then in the **constructor *View* will be replaced with *DataBinding* view**.
         }
     }
 
+### Result
+
+![](https://github.com/anjandebnath/DataBinding/blob/master/output.png)
+
+
 ### Reference Links
 
 - https://inducesmile.com/android/android-databinding-example-tutorial/
