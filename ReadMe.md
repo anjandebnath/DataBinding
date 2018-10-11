@@ -23,6 +23,10 @@ Databinding Allows to import any class.
 
 ### Observables in Databinding
 
+**@Binable** annotation is given to each property which you want to be observed.
+
+**notifyPropertyChanged** if you want to notify any changes in a property inside your model class.
+
     @Bindable
     public String getName() {
         return name;
