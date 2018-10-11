@@ -1,6 +1,6 @@
 ### Include Layout
 
-Databinding allows to include any layout
+Databinding allows to include any content layout inside a parent layout.
 
     <include
             layout="@layout/content_recycler"
@@ -8,11 +8,12 @@ Databinding allows to include any layout
             bind:user="@{user}"
             />
 
-### Import
+### Import Class
 
-Databinding Allows to import any class
+Databinding Allows to import any class.
 
     <import type="com.example.user06.databinding.recycler.utils.BindingUtils"/>
+
     <TextView
                 android:id="@+id/textView"
                 ...
@@ -44,7 +45,52 @@ Above example will load image url by using the attribute **profileImage** used a
 
 ### Click Handlers
 
+This is the custom click listener
 
+     public class CustomClickHandlers{
+
+        Context mContext;
+
+        public CustomClickHandlers(Context context){
+            mContext = context;
+        }
+
+        public void onProfileInfoFabClicked(View view){
+
+            ...
+        }
+
+    }
+
+in xml layout the clicklistener added
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            ...
+            android:onClick="@{handler::onProfileInfoFabClicked}"/>
+
+
+### RecyclerView Adapter
+
+Inside Recyclerview view holder when databinding need to be used
+
+then in the **constructor *View* will be replaced with *DataBinding* view**.
+
+     public MyViewHolder(View itemView) {
+            super(itemView);
+        }
+
+**will be replaced by**
+
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+
+        PostRowItemBinding binding;
+
+        public MyViewHolder(PostRowItemBinding itemBinding) {
+            super(itemBinding.getRoot());
+            this.binding = itemBinding;
+        }
+    }
 
 ### Reference Links
 

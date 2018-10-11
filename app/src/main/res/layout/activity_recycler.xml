@@ -10,6 +10,10 @@
             name="user"
             type="com.example.user06.databinding.recycler.model.User" />
 
+        <variable
+            name="handler"
+            type="com.example.user06.databinding.recycler.activity.RecyclerActivity.CustomClickHandlers"/>
+
 
     </data>
 
@@ -47,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:onClick="@{handler::onProfileInfoFabClicked}"
         app:srcCompat="@android:drawable/ic_dialog_info" />
 
 </android.support.design.widget.CoordinatorLayout>

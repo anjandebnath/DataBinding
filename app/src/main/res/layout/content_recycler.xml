@@ -26,6 +26,7 @@
         tools:showIn="@layout/activity_recycler">
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="404dp"
             android:layout_marginTop="8dp"
