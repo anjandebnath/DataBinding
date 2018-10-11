@@ -115,6 +115,8 @@ then in the **constructor *View* will be replaced with *DataBinding* view**.
 
 ### Reference Links
 
+- https://www.androidhive.info/android-databinding-in-recyclerview-profile-screen/
+
 - https://inducesmile.com/android/android-databinding-example-tutorial/
 
 - https://android.jlelse.eu/android-data-binding-binding-adapters-part-5-2bc91e43caa0
