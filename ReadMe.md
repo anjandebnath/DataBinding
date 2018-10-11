@@ -21,6 +21,18 @@ Databinding Allows to import any class.
                 ...
                 tools:textColor="@android:color/white" />
 
+### Observables in Databinding
+
+    @Bindable
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+        notifyPropertyChanged(BR.name);
+    }
+
 ### Binding Adapters
 
 BindingAdapter annotation allows to customize how a setter for an attribute is called.
