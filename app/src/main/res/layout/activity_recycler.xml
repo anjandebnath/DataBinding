@@ -3,9 +3,13 @@
 <layout xmlns:bind="http://schemas.android.com/apk/res/android">
 
     <data>
+
+        <import type="com.example.user06.databinding.recycler.utils.BindingUtils"/>
+
         <variable
             name="user"
             type="com.example.user06.databinding.recycler.model.User" />
+
 
     </data>
 
@@ -34,6 +38,7 @@
     <include
         layout="@layout/content_recycler"
         android:id="@+id/content"
+        bind:user= "@{user}"
         />
 
     <android.support.design.widget.FloatingActionButton
@@ -42,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_info" />
 
 </android.support.design.widget.CoordinatorLayout>
 </layout>
